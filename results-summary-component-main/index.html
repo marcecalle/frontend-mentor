@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <main>
+    <section class="container">
+      <!-- BLOQUE AZUL -->
+      <article class="container__result">
+        <h2 class="container__result__title">Your Result</h2>
+        <div class="container__result__score">
+          <p class="container__result__score__number">76</p>
+          <p class="conatiner__result__score__top">of 100</p>
+        </div>
+        <p class="container__result__mark">Great</p>
+        <p class="container__result__paragraph">You scored higher than 65% of the people who have taken these tests.</p>
+      </article>
+      <!-- BLOQUE BLANCO -->
+      <article class="container__summary">
+        <h2 class="container__summary__title">Summary</h2>
+        <div class="container__summary__option container__summary__option--red">
+          <p class="container__summary__option__left">
+            <img class="container__summary__option__left__image" src="./assets/images/icon-reaction.svg" alt="icon reaction">
+            <span class="container__summary__option__left__text container__summary__option__left__text--red">Reaction</span>
+          </p>
+          <p class="container__summary__option__right__number">80
+            <span class="container__summary__option__right__number__top">/ 100</span>
+          </p>
+        </div>
+        <div class="container__summary__option container__summary__option--yellow">
+          <p class="container__summary__option__left">
+            <img class="container__summary__option__left__image" src="./assets/images/icon-memory.svg" alt="icon reaction">
+            <span class="container__summary__option__left__text container__summary__option__left__text--yellow">Memory</span>
+          </p>
+          <p class="container__summary__option__right__number">92
+            <span class="container__summary__option__right__number__top">/ 100</span>
+          </p>
+        </div>
+        <div class="container__summary__option container__summary__option--green">
+          <p class="container__summary__option__left">
+            <img class="container__summary__option__left__image" src="./assets/images/icon-verbal.svg" alt="icon reaction">
+            <span class="container__summary__option__left__text container__summary__option__left__text--green">Verbal</span>
+          </p>
+          <p class="container__summary__option__right__number">61
+            <span class="container__summary__option__right__number__top">/ 100</span>
+          </p>
+        </div>
+        <div class="container__summary__option container__summary__option--blue">
+          <p class="container__summary__option__left">
+            <img class="container__summary__option__left__image" src="./assets/images/icon-visual.svg" alt="icon reaction">
+            <span class="container__summary__option__left__text container__summary__option__left__text--blue">Visual</span>
+          </p>
+          <p class="container__summary__option__right__number">72
+            <span class="container__summary__option__right__number__top">/ 100</span>
+          </p>
+        </div>
+        <button class="conatiner__summary__button">Continue</button>
+      </article>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Marce Calle</a>.
+  </footer>
+</body>
+</html>
