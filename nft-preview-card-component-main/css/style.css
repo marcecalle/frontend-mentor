@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+   /*PRiMARY*/
+   --soft-blue: hsl(215, 51%, 70%);
+   --cyan: hsl(178, 100%, 50%);
+   /*NEUTRAL*/
+   --very-dark-blue-main: hsl(217, 54%, 11%); /*(main BG)*/
+   --very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
+   --very-dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
+   --white: hsl(0, 0%, 100%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'Outfit', sans-serif;
+   font-size: 18px; /*PARAGRAPH*/
+}
+.main{
+   background-color: var(--very-dark-blue-main);
+   height: 100vh;
+   width: 100vw;
+   padding-top: 75px;
+}
+.main__card{
+   background-color: var(--very-dark-blue-card);
+   width: 330px;
+   height: 540px;
+   border-radius: 20px;
+   margin: 0px auto;
+   padding: 25px;
+}
+.main__card__image{
+   width: 280px;
+   border-radius: 10px;
+}
+.main__card__title{
+   margin-top: 25px;
+   color: var(--white);
+   font-size: 1.2em;
+}
+.main__card__paragraph{
+   color: var(--soft-blue);
+   margin-top: 15px;
+   font-size: 0.9em;
+   font-weight: 300;
+}
+.main__card__price-time{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+.main__card__price-time__price-info__value{
+   margin-left: 5px;
+   color: var(--cyan);
+   font-size: 0.8em;
+   font-weight: 600;
+}
+.main__card__price-time__time-info__days-left{
+   color: var(--soft-blue);
+   font-size: 0.8em;
+   font-weight: 600;
+   margin-left: 5px;
+}
+.main__card__line{
+   border-color: var(--very-dark-blue-line);
+}
+.main__card__autor{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   margin-top: 15px;
+}
+.main__card__autor__avatar{
+   width: 30px;
+   border: 1px solid var(--white);
+   border-radius: 50%;
+}
+.main__card__autor__info{
+   color: var(--white);
+   font-size: 0.9em;
+   margin-left: 15px;
+}
+.main__card__autor__info-blue{
+   color: var(--soft-blue);
+}
+
+.attribution{
+   font-size: 11px; text-align: center;
+}
+.attribution a{
+   color: hsl(228, 45%, 44%);
+}
