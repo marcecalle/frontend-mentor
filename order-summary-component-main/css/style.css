@@ -2,9 +2,12 @@
 :root{
    --pale-blue: hsl(225, 100%, 94%);
    --bright-blue: hsl(245, 75%, 52%);
+   --bright-blue-active: hsl(245, 60%, 54%);
    --very-pale-blue: hsl(225, 100%, 98%);
    --desaturated-blue: hsl(224, 23%, 55%);
    --dark-blue: hsl(223, 47%, 23%);
+
+   --font: 'Red Hat Display', sans-serif;
 }
 *{
    margin: 0;
@@ -25,6 +28,8 @@ button{
    margin: 5px 0;
 }
 .main-container{
+   background-image: url(../images/pattern-background-desktop.svg);
+   background-repeat: no-repeat;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -33,16 +38,17 @@ button{
    background-color: var(--pale-blue);
 }
 .order-card{
-   width: 320px;
+   width: 340px;
    background-color: white;
    border-radius: 20px;
+   box-shadow: 0px 0px 15px 0px var(--desaturated-blue);
 }
 .img__hero{
    width: 100%;
    border-radius: 20px 20px 0 0;
 }
 .order-card__info{
-   padding: 15px 20px;
+   padding: 15px 30px;
    text-align: center;
 }
 .info__title{
@@ -54,6 +60,7 @@ button{
    margin: 20px 0;
    color: var(--desaturated-blue);
    line-height: 1.6em;
+   letter-spacing: 0.5px;
 }
 .info__summary{
    display: flex;
@@ -86,8 +93,19 @@ button{
    border-radius: 10px;
    color: white;
    box-shadow: 0px 5px 15px var(--desaturated-blue);
+   font-family: var(--font);
+   font-weight: 900;
+   font-size: 0.9em;
 }
-
+.button-primary--active:hover{
+   background-color: var(--bright-blue-active);
+}
+.button-secondary{
+   color: var(--desaturated-blue);
+   font-family: var(--font);
+   font-weight: 900;
+   font-size: 0.9em;
+}
 
 
 .attribution{
