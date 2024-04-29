@@ -13,7 +13,7 @@ export default function MainHeader() {
 
    const handleOpenMenu = () => {
       setNavClass(
-         "absolute bg-white top-0 left-0 h-full gap-y-4 font-bold w-4/5 p-8 flex flex-col md:p-0 md:flex-row md:flex gap-4 md:mr-auto md:static"
+         "absolute bg-white top-0 left-0 h-full gap-y-4 font-bold w-4/5 p-8 flex flex-col md:p-0 md:flex-row md:flex gap-4 md:mr-auto md:static z-10"
       );
    };
    const handleCloseMenu = () => {

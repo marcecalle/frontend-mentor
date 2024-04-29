@@ -14,59 +14,63 @@ import { useState } from "react";
 const arrayImgs = [imgProd1, imgProd2, imgProd3, imgProd4];
 
 export default function SlideProduct() {
-   const [imgIndex, setImgIndex] = useState(0);
-   const handleClickNext = () => {
-      imgIndex >= arrayImgs.length - 1
-         ? setImgIndex(0)
-         : setImgIndex(imgIndex + 1);
-   };
-   const handleClickPrev = () => {
-      imgIndex <= 0
-         ? setImgIndex(arrayImgs.length - 1)
-         : setImgIndex(imgIndex - 1);
-   };
+  const [imgIndex, setImgIndex] = useState(0);
+  const handleClickNext = () => {
+    imgIndex >= arrayImgs.length - 1
+      ? setImgIndex(0)
+      : setImgIndex(imgIndex + 1);
+  };
+  const handleClickPrev = () => {
+    imgIndex <= 0
+      ? setImgIndex(arrayImgs.length - 1)
+      : setImgIndex(imgIndex - 1);
+  };
 
-   return (
-      <>
-         <section className="grid md:grid-cols-4 md:gap-6">
-            <div className="col-span-4 relative">
-               <img src={arrayImgs[imgIndex]} alt="Image Product 1" />
-               <div className=" absolute top-1/2 left-0 -translate-y-1/2 w-full flex justify-between px-4">
-                  <button
-                     onClick={handleClickPrev}
-                     className="bg-white w-10 h-10 grid place-items-center rounded-full"
-                  >
-                     <PrevIcon />
-                  </button>
-                  <button
-                     onClick={handleClickNext}
-                     className="bg-white w-10 h-10 grid place-items-center rounded-full"
-                  >
-                     <NextIcon />
-                  </button>
-               </div>
-            </div>
-            <img
-               src={imgSmallProd1}
-               alt="Thumbnail Product 1"
-               className="hidden md:block"
-            />
-            <img
-               src={imgSmallProd2}
-               alt="Thumbnail Product 2"
-               className="hidden md:block"
-            />
-            <img
-               src={imgSmallProd3}
-               alt="Thumbnail Product 3"
-               className="hidden md:block"
-            />
-            <img
-               src={imgSmallProd4}
-               alt="Thumbnail Product 4"
-               className="hidden md:block"
-            />
-         </section>
-      </>
-   );
+  return (
+    <>
+      <section className="grid md:grid-cols-4 md:gap-6">
+        <div className="relative col-span-4">
+          <img
+            src={arrayImgs[imgIndex]}
+            alt="Image Product"
+            className=" aspect-[16/16] w-full"
+          />
+          <div className=" absolute left-0 top-1/2 flex w-full -translate-y-1/2 justify-between px-4">
+            <button
+              onClick={handleClickPrev}
+              className="grid h-10 w-10 place-items-center rounded-full bg-white"
+            >
+              <PrevIcon />
+            </button>
+            <button
+              onClick={handleClickNext}
+              className="grid h-10 w-10 place-items-center rounded-full bg-white"
+            >
+              <NextIcon />
+            </button>
+          </div>
+        </div>
+        <img
+          src={imgSmallProd1}
+          alt="Thumbnail Product 1"
+          className="hidden md:block"
+        />
+        <img
+          src={imgSmallProd2}
+          alt="Thumbnail Product 2"
+          className="hidden md:block"
+        />
+        <img
+          src={imgSmallProd3}
+          alt="Thumbnail Product 3"
+          className="hidden md:block"
+        />
+        <img
+          src={imgSmallProd4}
+          alt="Thumbnail Product 4"
+          className="hidden md:block"
+        />
+      </section>
+    </>
+  );
 }
