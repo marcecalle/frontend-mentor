@@ -1,5 +1,5 @@
-import DetailsProducts from "@/components/product/col-details/DetailsProduct";
-import MainImages from "@/components/product/col-images/MainImages";
+import DetailsProducts from "@/components/product/details/DetailsProduct";
+import GalleryProduct from "@/components/product/gallery/GalleryProduct";
 
 import imgProd1 from "@/assets/images/image-product-1.jpg";
 import imgProd2 from "@/assets/images/image-product-2.jpg";
@@ -24,7 +24,7 @@ export default function MainProduct() {
   return (
     <>
       <main className="grid grid-cols-1 items-center gap-8 md:container md:mx-auto md:min-h-[calc(100vh-88px-1px)] md:grid-cols-2">
-        <MainImages arrayImgs={arrayImgs} arrayImgsSmall={arrayImgsSmall} />
+        <GalleryProduct arrayImgs={arrayImgs} arrayImgsSmall={arrayImgsSmall} />
         <DetailsProducts />
       </main>
     </>

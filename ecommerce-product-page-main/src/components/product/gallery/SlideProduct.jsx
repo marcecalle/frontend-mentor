@@ -86,7 +86,7 @@ export default function SlideProduct({
               className="hidden md:block md:rounded-lg"
             />
             <span
-              className={`absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)] ${i === imgIndex && " border-2 border-orange-primary bg-[rgba(255,255,255,0.5)]"}`}
+              className={`absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)] ${i === imgIndex && "bg-[rgba(255,255,255,0.5)]"}`}
             ></span>
           </div>
         ))}

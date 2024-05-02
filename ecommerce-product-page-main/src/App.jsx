@@ -1,12 +1,12 @@
-import MainHeader from "@/components/header/MainHeader";
-import MainProduct from "@/components/product/MainProduct";
+import IndexHeader from "@/components/header/IndexHeader";
+import IndexProduct from "@/components/product/IndexProduct";
 function App() {
-   return (
-      <>
-         <MainHeader />
-         <MainProduct />
-      </>
-   );
+  return (
+    <>
+      <IndexHeader />
+      <IndexProduct />
+    </>
+  );
 }
 
 export default App;

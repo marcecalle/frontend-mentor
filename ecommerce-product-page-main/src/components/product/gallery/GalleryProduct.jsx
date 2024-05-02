@@ -1,4 +1,4 @@
-import SlideProduct from "@/components/product/col-images/SlideProduct";
+import SlideProduct from "@/components/product/gallery/SlideProduct";
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
@@ -15,13 +15,16 @@ export default function MainImages({ arrayImgs, arrayImgsSmall }) {
         handleOpenModal={handleOpenModal}
       />
       {isOpenModal && (
-        <SlideProduct
-          arrayImgs={arrayImgs}
-          arrayImgsSmall={arrayImgsSmall}
-          isOpenModal={isOpenModal}
-          handleCloseModal={handleCloseModal}
-          className="hidden md:absolute md:left-1/2 md:top-1/2 md:grid md:max-w-md md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-6"
-        />
+        <>
+          <span className="fixed left-0 top-0 h-full w-full bg-black/70"></span>
+          <SlideProduct
+            arrayImgs={arrayImgs}
+            arrayImgsSmall={arrayImgsSmall}
+            isOpenModal={isOpenModal}
+            handleCloseModal={handleCloseModal}
+            className="hidden md:absolute md:left-1/2 md:top-1/2 md:grid md:max-w-md md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-6"
+          />
+        </>
       )}
     </>
   );
