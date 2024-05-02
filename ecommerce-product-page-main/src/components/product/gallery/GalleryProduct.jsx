@@ -16,7 +16,10 @@ export default function MainImages({ arrayImgs, arrayImgsSmall }) {
       />
       {isOpenModal && (
         <>
-          <span className="fixed left-0 top-0 h-full w-full bg-black/70"></span>
+          <span
+            onClick={handleCloseModal}
+            className="fixed left-0 top-0 h-full w-full bg-black/70"
+          ></span>
           <SlideProduct
             arrayImgs={arrayImgs}
             arrayImgsSmall={arrayImgsSmall}
