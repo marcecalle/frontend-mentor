@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import logoSneaker from "@/assets/images/logo.svg";
 import avatarImage from "@/assets/images/image-avatar.png";
+import cartImage from "@/assets/images/image-product-1-thumbnail.jpg";
+
 import MenuIcon from "@/components/icons/MenuIcon";
 import CartIcon from "@/components/icons/CartIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
-import { useState } from "react";
 import NavLinkHeader from "@/components/header/NavLinkHeader";
 import DeleteIcon from "@/components/icons/DeleteIcon";
 
@@ -19,7 +22,7 @@ export default function MainHeader() {
 
     return (
         <>
-            <header className="container mx-auto flex items-center gap-8 p-4 md:p-0">
+            <header className="container relative mx-auto flex items-center gap-8 p-4 md:p-0">
                 <button className="md:hidden" onClick={handleOpenMenu}>
                     <MenuIcon />
                 </button>
@@ -48,15 +51,31 @@ export default function MainHeader() {
                         <CartIcon />
                     </button>
                     <img src={avatarImage} alt="Avatar" className="w-12" />
-                    <section className=" absolute bg-gray-400">
-                        <h4>Cart</h4>
-                        <hr />
-                        <div className="grid grid-cols-3">
-                            <img src="" alt="" />
-                            <div>Lorem ipsum dolor, sit</div>
-                            <button>
-                                <DeleteIcon />
-                            </button>
+                    <section className="absolute left-0 top-[125%] z-10 w-full">
+                        <div className="mx-4 rounded-md bg-white">
+                            <h4 className="px-4 py-6 text-lg font-bold">
+                                Cart
+                            </h4>
+                            <hr />
+                            <div className="grid grid-cols-[1fr_4fr_1fr] items-center gap-4 px-4 py-6">
+                                <img
+                                    className=" rounded-md"
+                                    src={cartImage}
+                                    alt=""
+                                />
+                                <div>
+                                    <h6>Autumn Limited Edition Sneakers</h6>
+                                    <p>
+                                        <span>$125.00 x 3</span>
+                                        <span className="font-bold">
+                                            $375.00
+                                        </span>
+                                    </p>
+                                </div>
+                                <button className=" ml-auto">
+                                    <DeleteIcon className=" hover:fill-orange-primary" />
+                                </button>
+                            </div>
                         </div>
                     </section>
                 </div>
